@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceTracker - Dinamik Fiyat Takip Paneli</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard">
+        <header>
+            <h1>📊 PriceTracker UI</h1>
+            <p>Ürün linkini yapıştır, hedef fiyatını belirle, fiyat düştüğünde anında haber al!</p>
+        </header>
+
+        <div class="tracker-form">
+            <input type="text" id="productUrl" placeholder="Ürün Linki (örn: https://www.site.com/urun)...">
+            <input type="number" id="targetPrice" placeholder="Hedef Fiyat (TL)">
+            <button id="trackBtn">Takibe Al</button>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Aktif Takip</h3>
+                <p id="activeCount">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>İndirim Yakalanan</h3>
+                <p id="discountCount">0</p>
+            </div>
+        </div>
+
+        <div class="list-section">
+            <h2>Takip Edilen Ürünler</h2>
+            <ul id="productList">
+                <li class="empty-state">Henüz takip edilen ürün yok. Yukarıdan ekleyebilirsin!</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
